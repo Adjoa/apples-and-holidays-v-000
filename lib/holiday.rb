@@ -66,7 +66,7 @@ def all_winter_holiday_supplies(holiday_hash)
   winter_supplies
 end
 
-def format_symbol(symbol)
+def formatted_string(symbol)
   string = symbol.to_s
   separated_string = string.split('_')
   separated_string.each {|word| word.capitalize!}
@@ -83,10 +83,10 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
 
   holiday_hash.each do |season, holidays|
-    puts "#{season}"
+    puts "#{formatted_string(season)}"
 
     holidays.each do |holiday, supplies|
-      puts "#{holiday}: #{supplies}"
+      puts "#{formatted_string(holiday)}: #{supplies}"
     end
   end
 
