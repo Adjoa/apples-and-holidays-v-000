@@ -44,7 +44,7 @@ end
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
   # code here
   # remember to return the updated hash
-  holiday_hash[season.to_sym] = {holiday.to_sym : []}
+  holiday_hash[season.to_sym] = {holiday.to_sym => []}
   supply_array.each do |supply|
     holiday_hash[season.to_sym][holiday.to_sym] << supply
   end
