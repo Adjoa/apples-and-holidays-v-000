@@ -74,9 +74,9 @@ def formatted_sym(symbol)
 end
 
 def formatted_array(array)
-  array.each_with_index do |item, index|
+  array.collect.each_with_index do |item, index|
     while !array.last
-      item << ','
+      item << ', '
     end
   end
 
