@@ -66,11 +66,21 @@ def all_winter_holiday_supplies(holiday_hash)
   winter_supplies
 end
 
-def formatted_string(symbol)
+def formatted_sym(symbol)
   string = symbol.to_s
   separated_string = string.split('_')
   separated_string.each {|word| word.capitalize!}
   separated_string.join
+end
+
+def formatted_array(array)
+  array.each_with_index do |item, index|
+    while index != array.length - 1
+      item << ','
+    end
+  end
+
+  array.join
 end
 
 def all_supplies_in_holidays(holiday_hash)
@@ -83,10 +93,10 @@ def all_supplies_in_holidays(holiday_hash)
   # etc.
 
   holiday_hash.each do |season, holidays|
-    puts "#{formatted_string(season)}:"
+    puts "#{formatted_sym(season)}:"
 
     holidays.each do |holiday, supplies|
-      puts "#{formatted_string(holiday)}: "
+      puts "#{formatted_sym(holiday)}: "
 
       supplies.each do |supply|
         puts "#{supply} "
