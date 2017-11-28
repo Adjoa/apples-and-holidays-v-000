@@ -76,7 +76,7 @@ end
 def formatted_array(array)
   array.collect.each_with_index do |item, index|
     while !array.last
-      item << ', '
+      array[index] << ', '
     end
   end
 
