@@ -54,7 +54,7 @@ end
 
 def all_winter_holiday_supplies(holiday_hash)
   # return an array of all of the supplies that are used in the winter season
-  
+
   winter_supplies = []
 
   holiday_hash[:winter].each do |holiday, supplies|
@@ -66,8 +66,9 @@ def all_winter_holiday_supplies(holiday_hash)
   winter_supplies
 end
 
-def format_string(string)
-  separated_string = string.split(' ')
+def format_symbol(symbol)
+  string = symbol.to_s
+  separated_string = string.split('_')
   separated_string.each {|word| word.capitalize!}
   separated_string.join
 end
@@ -83,7 +84,7 @@ def all_supplies_in_holidays(holiday_hash)
 
   holiday_hash.each do |season, holidays|
     puts "#{season}"
-    
+
     holidays.each do |holiday, supplies|
       puts "#{holiday}: #{supplies}"
     end
