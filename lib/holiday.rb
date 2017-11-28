@@ -75,7 +75,7 @@ end
 
 def formatted_array(array)
   array.each_with_index do |item, index|
-    while index != array.length - 1
+    while !array.last
       item << ','
     end
   end
