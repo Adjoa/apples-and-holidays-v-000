@@ -96,11 +96,11 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{formatted_sym(season)}:"
 
     holidays.each do |holiday, supplies|
-      puts "#{formatted_sym(holiday)}: "
+      puts "#{formatted_sym(holiday)}: formatted_array(supplies)"
 
-      supplies.each do |supply|
-        puts "#{supply} "
-      end
+      # supplies.each do |supply|
+      #   puts "#{supply} "
+      # end
     end
   end
 
